@@ -4,9 +4,10 @@ This is a smart pharm box controller
 # Setup
 ## install requirement python package
 ```
+brew install mbedtls
 pip3 install wavio
-pip3 install whisper-openai
-pip3 install PyQt5
+pip3 install -U openai-whisper
+pip3 install pyqt5
 pip3 install sounddevice
 ```
 ## Mac OSX setting
