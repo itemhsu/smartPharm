@@ -7,8 +7,9 @@ This is a smart pharm box controller
 brew install mbedtls
 pip3 install wavio
 pip3 install -U openai-whisper
-pip3 install pyqt5
+pip3 install PyQT5
 pip3 install sounddevice
+pip3 install PyQtWebEngine
 ```
 ## Mac OSX setting
 ### 1. Apple -> System Settings ... -> Accessibility
