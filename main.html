@@ -96,7 +96,7 @@
                 <option value="三十ㄧ">31</option>
             </select>
         </div>
-        <button onclick="pyObj.onPress()">領藥</button>
+        <button onclick="submitData()">領藥</button>
         <div id="result">辨識結果：＿</div>
 
         <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
@@ -104,6 +104,26 @@
             new QWebChannel(qt.webChannelTransport, function(channel) {
                 window.pyObj = channel.objects.pyObj;
             });
+
+    function submitData() {
+        pyObj.updateName(document.getElementById("nameInput").value);
+        pyObj.updateYear(document.getElementById("yearInput").value);
+        pyObj.updateMonth(document.getElementById("monthInput").value);
+        pyObj.updateDay(document.getElementById("dayInput").value);
+        pyObj.onPress(); // 如果您仍然想调用原始的onPress方法
+    }
+    document.getElementById("nameInput").addEventListener("input", function() {
+        pyObj.updateName(this.value);
+    });
+    document.getElementById("yearInput").addEventListener("change", function() {
+        pyObj.updateYear(this.value);
+    });
+    document.getElementById("monthInput").addEventListener("change", function() {
+        pyObj.updateMonth(this.value);
+    });
+    document.getElementById("dayInput").addEventListener("change", function() {
+        pyObj.updateDay(this.value);
+    });
         </script>
     </body>
 </html>
