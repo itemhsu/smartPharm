@@ -19,6 +19,10 @@ pip3 install PyQtWebEngine
 <img width="710" alt="image" src="https://github.com/itemhsu/smartPharm/assets/25599185/64311aae-4cfc-42f6-951c-a1338c2cd0b6">
 
 ### 3. package
+#### 3.0 run
+```
+python html_Date_App.py
+```
 #### 3.1 pyinstall 1st time to create app.spec
 ```
 pyinstaller --onefile --windowed html_Date_App.py --icon=pharm.icns
