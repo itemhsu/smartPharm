@@ -21,19 +21,22 @@ pip3 install PyQtWebEngine
 ### 3. package
 #### 3.1 pyinstall 1st time to create app.spec
 ```
-pyinstaller --onefile --windowed app.py --icon=pharm.icns
+pyinstaller --onefile --windowed html_Date_App.py --icon=pharm.icns
 
 ```
 
 #### 3.2 pyinstall add more data in app.spec
 ```
 a = Analysis(
-    ['app.py'],
+    ['html_Date_App.py'],
     pathex=[],
     binaries=[],
     datas=[('/Users/hsuyueht/Library/Python/3.9/lib/python/site-packages/whisper/assets/mel_filters.npz', 'whisper/assets/'), ('/Users/hsuyueht/Library/Python/3.9/lib/python/site-packages/whisper/assets/multilingual.tiktoken', 'whisper/assets/')],
 ```
-
+#### 3.3 pyinstall with exist *.spec
+```
+pyinstaller html_Date_App.spec
+```
 ### wtach log
 ```
 log show --predicate 'process == "app"' --last 1h
